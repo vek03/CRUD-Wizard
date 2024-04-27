@@ -9,7 +9,6 @@
 </head>
 
 <body>
-    
     <!-- NAVBAR -->
 
     <div class="navbar">
@@ -59,8 +58,6 @@
                 </form>
             </div>
         </div>
-
-
 </body>
 
 </html>

@@ -17,15 +17,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="../public/css/style.css" />
     <title>Wizard</title>
 </head>
+
 
 <body>
     <!-- NAVBAR -->
     <div class="navbar">
         <div class="container-xxl">
             <div class="center">
+
                 <img src="../public/img/wiz.png" alt="Logo do Wizard" class="Wizardimg">
             </div>
         
@@ -36,6 +39,7 @@
         </div>   
     </div>
         <!-- NAVBAR END -->
+
 
 
         <div class="row">
@@ -65,13 +69,13 @@
                     <input type="date" id="data" name="data">
 
                     <div class="Cadastro">
-                        <button type="update" value="button" class="Cadastro">Editar</button>
+
+                        <button type="submit" value="button" class="Cadastro">Editar</button>
+
                     </div>
                 </form>
             </div>
         </div>
-
-
 </body>
 
 </html>
