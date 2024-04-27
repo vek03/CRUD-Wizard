@@ -1,46 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sp">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastrar Wizard</title>
+    <link rel="stylesheet" href="../public/css/style.css" />
+    <title>Wizard</title>
 </head>
+
 <body>
-    <!--Barra de Navegação (navBar)-->
+    <!-- NAVBAR -->
+
     <div class="navbar">
-        <a href="">Cadastrar</a>
-        <a href="">Consultar</a>
+        <div class="container-xxl">
+            <div class="center">
+                <img src="../public/img/wiz.png" alt="Logo do Wizard" class="Wizardimg">
+            </div>
+        
+            <div class="navbar">
+                <a href="/">Cadastro</a>
+                <a href="/consulta">Consulta</a>
+            </div> 
+        </div>   
     </div>
 
-    <div class="row">
-        <div class="col">
-            &nbsp;
+        <!-- NAVBAR END -->
+        
+        <div class="row">
+            <div class="col">
+                &nbsp;
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            &nbsp;
+        <div class="row">
+            <div class="col">
+                &nbsp;
+            </div>
         </div>
-    </div>
 
-    <!--Container-->
-    <div class="container">
-        <!--Formulário-->
-        <div class="form">
-            <form action="" method="">
-                <label for="name"> Nome: </label>
-                <input  type="text" id="name" name="name">
 
-                <label for="email"> Email: </label>
-                <input type="email" id="email" name="email">
+        <div class="container">
+            <!--Formulário-->
+            <div class="form">
+                <form action="" method="">
+                    
+                    <label for="name"> Nome: </label>
+                    <input type="text" id="name" name="name">
+                    
+                    <label for="email"> Email: </label>
+                    <input type="email" id="email" name="email">
+                    
+                    <label for="data"> Data de Nascimento: </label>
+                    <input type="date" id="data" name="data">
 
-                <label for="data"> Data de Nascimento: </label>
-                <input type="date" id="data" name="data">
-
-                <button type="submit" value="button">Cadastrar</button>
-            </form>
+                    <div class="Cadastro">
+                        <button type="submit" value="button" class="Cadastro">Cadastrar</button>
+                    </div>
+                </form>
+            </div>
         </div>
-    </div>
 </body>
+
 </html>

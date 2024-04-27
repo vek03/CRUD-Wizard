@@ -4,65 +4,83 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sp">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consultar Wizard</title>
-    <script>
-		function confirmDelete(delUrl) {
-  			if (confirm("Deseja apagar o registro?")) {
-   				document.location = delUrl;
-	        }  
-		}
-	</script>
+    <link rel="stylesheet" href="../public/css/style.css" />
+    <title>Wizard</title>
 </head>
 
 <body>
-    <!--Barra de Navegação (navBar)-->
+    <!-- NAVBAR -->
     <div class="navbar">
-        <a href="">Cadastro</a>
-        <a href="">Consultar</a>
+        <div class="container-xxl">
+            <div class="center">
+                <img src="../public/img/wiz.png" alt="Logo do Wizard" class="Wizardimg">
+            </div>
+        
+            <div class="navbar">
+                <a href="/">Cadastro</a>
+                <a href="/consulta">Consulta</a>
+            </div> 
+        </div>   
     </div>
+        <!-- NAVBAR END -->
 
-    <!--Container-->
-    <div class="container">
-        <!--Tabela-->
-        <div>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Nome</th>
-                        <th>Email</th>
-                        <th>Data de Nascimento</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <!--Nome-->
-                        <td></td>
-                        <!--Email-->
-                        <td></td>
-                        <!--Data de Nascimento-->
-                        <td></td>
-                        <!--Buttons-->
-                        <td>
-                            <!--Formulário para editar os dados do cadastro-->
-                            <form action="" method="">
-                                <button type="submit">Editar</button>
-                            </form>
 
-                            <!--Formulário para excluir os dados do cadastro-->      
-                            <form action="" method="">
-                                <button type="submit">Excluir</button>
-                            </form>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="row">
+            <div class="col">
+                &nbsp;
+            </div>
         </div>
-    </div>
-</body>   
+        <div class="row">
+            <div class="col">
+                &nbsp;
+            </div>
+        </div>
+
+
+        <div class="container">
+            <!--Tabela-->
+            <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="AzulAbisal">Nome</th>
+                            <th class="AzulAbisal">Email</th>
+                            <th class="AzulAbisal">Data de Nascimento</th>
+                            <th class="AzulAbisal">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <!--Nome-->
+                            <td class="AzulEscuro"><b>John Lemom</b></td>
+                            <!--Email-->
+                            <td class="AzulEscuro"><b>john@example.com</b></td>
+                            <!--Data de Nascimento-->
+                            <td class="AzulEscuro"><b> 01/01/1990 </b></td>
+                            <!--Buttons-->
+                            <td>
+                                <div class="form-buttons">
+                                    <!--Formulário para editar os dados do cadastro-->
+                                    <form action="" method="">
+                                        <button class="Consultar" type="submit"><a href="../View/edit.php">Editar</a></button>
+                                    </form>
+        
+                                    <!--Formulário para excluir os dados do cadastro-->
+                                    <form action="" method="">
+                                        <button class="Consultar" type="submit">Excluir</button>
+                                    </form>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
 </body>
+
 </html>

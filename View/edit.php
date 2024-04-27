@@ -12,40 +12,46 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sp">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VekSystem</title>
+
+    <link rel="stylesheet" href="../public/css/style.css" />
+    <title>Wizard</title>
+</head>
+
 
 <body>
     <!-- NAVBAR -->
     <div class="navbar">
         <div class="container-xxl">
             <div class="center">
-                <img src="/Imgs/wiz.png" alt="Logo do Wizard" class="Wizardimg">
+
+                <img src="../public/img/wiz.png" alt="Logo do Wizard" class="Wizardimg">
             </div>
         
             <div class="navbar">
-                <a href="/Index.html">Cadastro</a>
-                <a href="/consultar.html">Consulta</a>
+                <a href="/">Cadastro</a>
+                <a href="/consulta">Consulta</a>
             </div> 
         </div>   
     </div>
         <!-- NAVBAR END -->
 
 
-    <div class="row">
-        <div class="col">
-            &nbsp;
+
+        <div class="row">
+            <div class="col">
+                &nbsp;
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            &nbsp;
+        <div class="row">
+            <div class="col">
+                &nbsp;
+            </div>
         </div>
-    </div>
 
 
         <div class="container">
@@ -63,11 +69,13 @@
                     <input type="date" id="data" name="data">
 
                     <div class="Cadastro">
+
                         <button type="submit" value="button" class="Cadastro">Editar</button>
+
                     </div>
                 </form>
             </div>
         </div>
-
 </body>
+
 </html>
