@@ -57,16 +57,16 @@
         <div class="container">
             <!--Formulário-->
             <div class="form">
-                <form action="" method="">
+                <form  method="POST" action="/editar?cliente=<?php echo $cliente->getCliente_Id(); ?>">
                     
                     <label for="name"> Nome: </label>
-                    <input type="text" id="name" name="name">
+                    <input type="text" id="nome" name="nome" value="<?php echo $cliente->getNome(); ?>">
                     
                     <label for="email"> Email: </label>
-                    <input type="email" id="email" name="email">
+                    <input type="email" id="email" name="email" value="<?php echo $cliente->getEmail(); ?>">
                     
                     <label for="data"> Data de Nascimento: </label>
-                    <input type="date" id="data" name="data">
+                    <input type="date" id="dt_nasc" name="dt_nasc" value="<?php echo $cliente->getDt_Nasc(); ?>">
 
                     <div class="Cadastro">
 
