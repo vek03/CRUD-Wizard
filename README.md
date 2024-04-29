@@ -3,10 +3,11 @@ O projeto ainda está em desenvolvimento:
 
 - [x] Estrutura
 - [x] Front-End
-- [ ] Create
-- [ ] Read
-- [ ] Update
-- [ ] Delete
+- [x] Create
+- [x] Read
+- [x] Update
+- [x] Delete
+- [ ] Funções SQL
 
 
 > Projeto CRUD com PHP Puro e Composer. Sistema de Rotas e psr-4
