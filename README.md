@@ -7,7 +7,7 @@ O projeto ainda está em desenvolvimento:
 - [x] Read
 - [x] Update
 - [x] Delete
-- [ ] Funções SQL
+- [x] Funções SQL
 
 
 > Projeto CRUD com PHP Puro e Composer. Sistema de Rotas e psr-4
