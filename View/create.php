@@ -41,16 +41,16 @@
         <div class="container">
             <!--Formulário-->
             <div class="form">
-                <form action="" method="">
+                <form action="/cadastro" method="POST">
                     
                     <label for="name"> Nome: </label>
-                    <input type="text" id="name" name="name">
+                    <input type="text" id="nome" name="nome">
                     
                     <label for="email"> Email: </label>
                     <input type="email" id="email" name="email">
                     
                     <label for="data"> Data de Nascimento: </label>
-                    <input type="date" id="data" name="data">
+                    <input type="date" id="dt_nasc" name="dt_nasc">
 
                     <div class="Cadastro">
                         <button type="submit" value="button" class="Cadastro">Cadastrar</button>
