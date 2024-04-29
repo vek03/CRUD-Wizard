@@ -16,6 +16,23 @@ class Cliente
         $this->dt_nasc = $cliente_atr['dt_nasc'] ?? '';
     }
 
+    public function dataCode(){
+        $partes = explode('/', $this->dt_nasc);
+    
+        $data_formatada = $partes[2] . '-' . $partes[1] . '-' . $partes[0];
+    
+        return $data_formatada;
+    }
+
+    public function dataFormatada(){
+        $partes = explode('-', $this->dt_nasc);
+
+        // Reorganiza as partes para o formato desejado
+        $data_formatada = $partes[2] . '/' . $partes[1] . '/' . $partes[0];
+
+        return $data_formatada;
+    }
+
     public function getCliente_Id(): int
     {
         return $this->cliente_id;
