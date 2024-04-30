@@ -2,36 +2,42 @@
 O projeto ainda está em desenvolvimento:
 
 - [x] Estrutura
-- [ ] Front-End
-- [ ] Create
-- [ ] Read
-- [ ] Update
-- [ ] Delete
+- [x] Front-End
+- [x] Create
+- [x] Read
+- [x] Update
+- [x] Delete
+- [x] Funções SQL
 
 
 > Projeto CRUD com PHP Puro e Composer. Sistema de Rotas e psr-4
 
 # INICIANDO PROJETO</h1>
 ### (SEMPRE CLONE DA BRANCH DE HOMOLOGAÇÃO)
-- Crie uma base de dados MySQL chamada "wizard_bd"
-- Crie uma tabela 'clientes' com as colunas 'cliente_id', 'nome', 'email' e 'dt_nasc'
+- Importe o arquivo .sql em App\Database\database.sql ou execute as instruções SQL dentro dele
 ```
 git clone -b homologacao <link_repositorio>
 cd <projeto>
 composer install
-composer dump-autoload
+composer dump-autoload //se for necessário
 php -S localhost:8081
 ```
 - htttp://localhost:8081
 
 <br><br>
 
-# EXPLICAÇÕES
-- Models: arquivos da estrutura das tabelas
-- Server: arquivo de conexão ao banco
-- app.js: inicialização das bibliotecas, rotas e operações
-- views/layout: arquivos de layout que serão utilizados em todas as páginas
-- views: paginas do projeto 
+# ESTRUTURA DO PROJETO
+- App: pasta principal do projeto
+- Controller: armazena os Controladores
+- Database: configuração e conexão do banco de dados
+- Helper: arquivos que irão auxíliar outros
+- Model: arquivos da estrutura das tabelas
+- Repository: arquivos que irão manipular os modelos e a base de dados diretamente
+- Route: arquivo de roteamento das requisições (URL)
+- public: contém os arquivos .js, .css e imagens da aplicação
+- View: paginas do projeto
+- index.php: primeiro arquivo a ser executado, contém os Headers, o autoload do Composer e a chamada para o roteamento
+- .htacces: arquivo que garante que todas as requisições passarão pelo index.php primeiro
 
 <br><br>
 

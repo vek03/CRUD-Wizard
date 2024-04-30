@@ -29,7 +29,7 @@ class Router
 
             default:
                 http_response_code(404);
-                echo 'Erro 404: Página não encontrada.';
+                echo "<script>alert('Página Não Encontrada! Clique OK para redirecionar...');document.location='/'</script>";
         }
     }
 
@@ -53,15 +53,9 @@ class Router
                 $this->controller->edit($cliente);
                 break;
 
-            case '/deletar':
-                $cliente = new Cliente();
-                $cliente->setCliente_Id($_GET['cliente']);
-                $this->controller->delete($cliente);
-                break;
-
             default:
                 http_response_code(404);
-                echo 'Erro 404: Página não encontrada.';
+                echo "<script>alert('Página Não Encontrada! Clique OK para redirecionar...');document.location='/'</script>";
         }
     }
 
@@ -77,10 +71,16 @@ class Router
                 $cliente->setCliente_Id($_GET['cliente']);
                 $this->controller->update($cliente);
                 break;
+
+            case '/deletar':
+                $cliente = new Cliente();
+                $cliente->setCliente_Id($_GET['cliente']);
+                $this->controller->delete($cliente);
+                break;
                 
             default:
                 http_response_code(404);
-                echo 'Erro 404: Página não encontrada.';
+                echo "<script>alert('Página Não Encontrada! Clique OK para redirecionar...');document.location='/'</script>";
         }
     }
 }

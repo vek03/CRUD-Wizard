@@ -1,4 +1,249 @@
-.test {
-    text-align: right;
-    float: right;
+/* CORES */
+
+.AzulAbisal{
+    color: #222A3D;
+}
+
+.AzulEscuro{
+    color: #22406C;
+}
+
+.AzulBebê{
+    color: #627B9D;
+} 
+
+.AzulClarinho{
+    color: #DEE5FF;
+} 
+
+.Branco {
+    color: #FFF;
+}
+
+.AzulAbisalBackground{
+   background-color: #222A3D;
+}
+
+.AzulEscuroBackground{
+    background-color: #22406C;
+}
+
+.AzulBebêBackground{
+    background-color: #627B9D;
+} 
+
+.AzulClarinhoBackground{
+    background-color: #DEE5FF;
+} 
+
+.BrancoBackground {
+    background-color: #FFF;
+}
+
+
+/* 
+/////////////////////////////
+// IMG
+///////////////////////////// 
+*/
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+.Wizardimg {
+    max-width: 100%; 
+    max-height: 100%; 
+}
+
+
+/* 
+/////////////////////////////
+// Body
+///////////////////////////// 
+*/
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #DEE5FF;
+  }
+
+.container,
+.container-fluid,
+.container-xxl,
+.container-xl,
+.container-lg,
+.container-md,
+.container-sm {
+  width: 100%;
+  padding-right: calc(1.5rem * 0.5);
+  padding-left: calc(0 * 0.5);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 570px) {
+  .container-sm, .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 770px) {
+  .container-md, .container-sm, .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 990px) {
+  .container-lg, .container-md, .container-sm, .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container-xl, .container-lg, .container-md, .container-sm, .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+    max-width: 1320px;
+  }
+}
+
+/* 
+/////////////////////////////
+// VARIABLES
+///////////////////////////// 
+*/
+
+.navbar {
+    background-color: #22406C;
+    overflow: hidden;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #FFF;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 28px;
+}
+
+.navbar a:hover {
+    opacity: 0.5;
+}
+
+a{
+    color: #FFF;
+}
+
+label{
+    margin: 10px;
+    font-size: 20px;
+    color: #222A3D;
+}
+
+input[type="text"], input[type="email"], input[type="date"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border-radius: 15px;
+    background-color: rgb(232, 240, 254);
+
+}
+
+input:-internal-autofill-selected {
+    appearance: menulist-button;
+    background-image: none !important;
+    background-color: light-dark(rgb(232, 240, 254), rgba(232, 240, 254)) !important;
+    color: fieldtext !important;
+}
+
+input[type="date"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border-radius: 15px;
+    background-color: rgb(232, 240, 254);
+}
+
+/* 
+/////////////////////////////
+// CADASTRO
+///////////////////////////// 
+*/
+
+.Cadastro{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+button.Cadastro {
+    background-color: #22406C;
+    color: white;
+    padding: 15px;
+    font-size: 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width:  20%;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+button.Cadastro:hover {
+    opacity: 0.5;
+}
+
+
+/* 
+/////////////////////////////
+// TABELA
+///////////////////////////// 
+*/
+
+button.Consultar {
+    background-color: #22406C;
+    color: #FFF;
+    padding: 15px;
+    font-size: 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width:  100%;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+button.Consultar:hover {
+    opacity: 0.5;
+}
+
+table {
+    color: #FFF;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    color: #FFF;
+    padding: 8px;
+    text-align: left;
+    border-bottom: 2px solid #222A3D; /* Cor de borda igual a AzulClarinho */
+
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }

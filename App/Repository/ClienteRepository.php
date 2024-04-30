@@ -16,7 +16,7 @@ class ClienteRepository
 
     public function store(Cliente $cliente)
     {
-        $query = "INSERT INTO clientes (nome, email, dt_nasc) VALUES (:nome, :email, :dt_nasc)";
+        $query = "CALL store(:nome, :email, :dt_nasc)";
 
         $stmt = $this->conn->prepare($query);
 
@@ -38,7 +38,7 @@ class ClienteRepository
 
     public function readAll() 
     {
-        $query = "SELECT * FROM clientes";
+        $query = "CALL readAll()";
         $stmt = $this->conn->prepare($query);
 
         if ($stmt->execute()) {
@@ -67,7 +67,7 @@ class ClienteRepository
     public function read(Cliente $cliente) {
         $cliente_id = $cliente->getCliente_Id();
 
-        $query = "SELECT * FROM clientes WHERE cliente_id = :id";
+        $query = "CALL readCliente(:id)";
         $stmt = $this->conn->prepare($query);
         $stmt->bindParam(":id", $cliente_id, PDO::PARAM_INT);
 
@@ -89,7 +89,7 @@ class ClienteRepository
 
     public function update(Cliente $cliente) 
     {
-        $query = "UPDATE clientes SET nome = :nome, email = :email, dt_nasc = :dt_nasc WHERE cliente_id = :id";
+        $query = "CALL updateCliente(:id, :nome, :email, :dt_nasc)";
 
         $stmt = $this->conn->prepare($query);
 
@@ -115,7 +115,7 @@ class ClienteRepository
     {
         $id = $cliente->getCliente_Id();
         
-        $query = "DELETE FROM clientes WHERE cliente_id = :id";
+        $query = "CALL deleteCliente(:id)";
         $stmt = $this->conn->prepare($query);
         $stmt->bindParam(":id", $id , PDO::PARAM_INT);
         

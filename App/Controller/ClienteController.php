@@ -1,18 +1,20 @@
 <?php
 namespace App\Controller;
 
-use App\Database\Database;
 use App\Model\Cliente;
+use App\Helper\RouteHelper;
 use App\Repository\ClienteRepository;
 use PDO;
 
 class ClienteController
 {
     private $repository;
+    private $route;
 
     public function __construct() 
     {
         $this->repository = new ClienteRepository();
+        $this->route = new RouteHelper();
     }
 
     public function index(){
@@ -20,36 +22,24 @@ class ClienteController
     }
 
     public function create(){
-        header("Location: View/create.php");
-        exit;
+        include 'View/create.php';
     }
 
-    public static function list(){
-        header("Location: View/list.php");
-        exit;
+    public function list(){
+        $clientes = $this->repository->readAll();
+        include 'View/list.php';
     }
 
     public function edit(Cliente $cliente){
-        header("Location: View/edit.php?cliente=".$cliente->getCliente_Id());
-        exit;
+        $cliente = $this->repository->read($cliente);
+        include 'View/edit.php';
     }
 
     public function store(Cliente $cliente)
     {
         $result = $this->repository->store($cliente);
-
-        return $this->list();
-    }
-
-
-    public function readAll() 
-    {
-        return $this->repository->readAll();
-    }
-
-
-    public function read(Cliente $cliente) {
-        return $this->repository->read($cliente);
+        
+        return $this->route->with('message', 'Cliente Cadastrado!')->redirect('/consulta');
     }
 
 
@@ -57,7 +47,8 @@ class ClienteController
     {
         $result = $this->repository->update($cliente);
 
-        return $this->list();
+        //$this->route->with('message', 'Cliente Atualizado!');
+        return $this->route->with('message', 'Cliente Atualizado!')->redirect('/consulta');
     }
 
 
@@ -65,6 +56,6 @@ class ClienteController
     {
         $result = $this->repository->delete($cliente);
 
-        return $this->list();
+        return $this->route->with('message', 'Cliente Deletado!')->redirect('/consulta');
     }
 }
