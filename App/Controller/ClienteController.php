@@ -38,10 +38,8 @@ class ClienteController
     public function store(Cliente $cliente)
     {
         $result = $this->repository->store($cliente);
-
-        session_start();
-        $_SESSION['message'] = 'Cliente Cadastrado!';
-        return $this->route->redirect('/consulta');
+        
+        return $this->route->with('message', 'Cliente Cadastrado!')->redirect('/consulta');
     }
 
 
@@ -49,9 +47,8 @@ class ClienteController
     {
         $result = $this->repository->update($cliente);
 
-        session_start();
-        $_SESSION['message'] = 'Cliente Cadastrado!';
-        return $this->route->redirect('/consulta');
+        //$this->route->with('message', 'Cliente Atualizado!');
+        return $this->route->with('message', 'Cliente Atualizado!')->redirect('/consulta');
     }
 
 
@@ -59,7 +56,6 @@ class ClienteController
     {
         $result = $this->repository->delete($cliente);
 
-        echo "<script>alert('Cliente Deletado!');</script>";
-        return $this->route->redirect('/consulta');
+        return $this->route->with('message', 'Cliente Deletado!')->redirect('/consulta');
     }
 }

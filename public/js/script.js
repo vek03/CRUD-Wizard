@@ -6,16 +6,16 @@ function confirmDelete() {
   }
 }
 
-function verificarSession() {
-  // Verifica se a sessão existe
+function messageSession() {
   var sessionValue = sessionStorage.getItem('message')
 
-  // Exibe a sessão em um alerta
   if (sessionValue !== null) {
       alert(sessionValue);
   }
+
+  sessionStorage.clear();
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-  verificarSession();
+  messageSession();
 });

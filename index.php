@@ -2,7 +2,6 @@
 
 require_once 'vendor/autoload.php';
 
-use App\Controller\ClienteController;
 use App\Route\Router;
 
 header("Access-Control-Allow-Origin: *"); //permite requisição de outros servidores
