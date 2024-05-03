@@ -43,24 +43,26 @@
 
         <div class="container">
             <!--Formulário-->
-            <div class="form">
-                <form  method="POST" action="/editar?cliente=<?php echo $cliente->getCliente_Id(); ?>">
-                    
-                    <label for="name"> Nome: </label>
-                    <input type="text" id="nome" name="nome" value="<?php echo $cliente->getNome(); ?>">
-                    
-                    <label for="email"> Email: </label>
-                    <input type="email" id="email" name="email" value="<?php echo $cliente->getEmail(); ?>">
-                    
-                    <label for="data"> Data de Nascimento: </label>
-                    <input type="date" id="dt_nasc" name="dt_nasc" value="<?php echo $cliente->dataCode(); ?>">
+            <div class="table-wrapper">
+                <div class="form">
+                    <form  method="POST" action="/editar?cliente=<?php echo $cliente->getCliente_Id(); ?>">
+                        
+                        <label for="name"> Nome: </label>
+                        <input type="text" id="nome" name="nome" value="<?php echo $cliente->getNome(); ?>">
+                        
+                        <label for="email"> Email: </label>
+                        <input type="email" id="email" name="email" value="<?php echo $cliente->getEmail(); ?>">
+                        
+                        <label for="data"> Data de Nascimento: </label>
+                        <input type="date" id="dt_nasc" name="dt_nasc" value="<?php echo $cliente->dataCode(); ?>">
 
-                    <div class="Cadastro">
+                        <div class="Cadastro">
 
-                        <button type="submit" value="button" class="Cadastro">Editar</button>
+                            <button type="submit" value="button" class="Cadastro">Editar</button>
 
-                    </div>
-                </form>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
 </body>

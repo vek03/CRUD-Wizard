@@ -13,7 +13,7 @@
     <!-- NAVBAR -->
 
     <div class="navbar">
-        <div class="container-xxl">
+        <div class="container">
             <div class="center">
                 <img src="../public/img/wiz.png" alt="Logo do Wizard" class="Wizardimg">
             </div>
