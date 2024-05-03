@@ -14,7 +14,7 @@ O projeto está concluído:
 
 # INICIANDO PROJETO</h1>
 ### (SEMPRE CLONE DA BRANCH DE HOMOLOGAÇÃO)
-- Importe o arquivo .sql em App\Database\database.sql ou execute as instruções SQL dentro dele
+- Importe o arquivo .sql em App\Database\wizard_bd.sql no seu SGBD MySQL ou execute as instruções SQL dentro dele
 ```
 git clone -b homologacao <link_repositorio>
 cd <projeto>
