@@ -80,8 +80,6 @@ body {
 .container-md,
 .container-sm {
   width: 100%;
-  padding-right: calc(1.5rem * 0.5);
-  padding-left: calc(0 * 0.5);
   margin-right: auto;
   margin-left: auto;
 }
@@ -111,6 +109,7 @@ body {
     max-width: 1320px;
   }
 }
+
 
 /* 
 /////////////////////////////
@@ -194,7 +193,6 @@ button.Cadastro {
     margin: 8px 0;
     border: none;
     cursor: pointer;
-    width:  20%;
     border-radius: 15px;
     justify-content: center;
     align-items: center;
@@ -229,6 +227,10 @@ button.Consultar:hover {
     opacity: 0.5;
 }
 
+.table-wrapper {
+    overflow-x: auto;
+}
+
 table {
     color: #FFF;
     width: 100%;
@@ -241,9 +243,23 @@ td {
     padding: 8px;
     text-align: left;
     border-bottom: 2px solid #222A3D; /* Cor de borda igual a AzulClarinho */
-
     text-align: center;
     justify-content: center;
     align-items: center;
     position: relative;
+}
+
+
+@media only screen and (max-width: 600px) {
+    th, td {
+        font-size: 14px;
+        padding: 6px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    th, td {
+        font-size: 12px;
+        padding: 6px;
+    }
 }
